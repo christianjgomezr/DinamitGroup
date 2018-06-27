@@ -34,17 +34,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton3" pref="168" max="32767" attributes="0"/>
-                          <Component id="jButton2" max="32767" attributes="0"/>
-                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ConsultarTrabajosProfesor" pref="168" max="32767" attributes="0"/>
+                          <Component id="CargarProfesores" max="32767" attributes="0"/>
+                          <Component id="CargarTrabajos" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton4" max="32767" attributes="0"/>
-                              <Component id="jButton5" max="32767" attributes="0"/>
+                              <Component id="ReportarTrabajosProfesores" max="32767" attributes="0"/>
+                              <Component id="ReportarTrabajosCentros" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jButton6" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="ReportarTrabajosPostgrados" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -57,18 +57,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CargarTrabajos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ReportarTrabajosProfesores" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CargarProfesores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ReportarTrabajosCentros" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ReportarTrabajosPostgrados" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ConsultarTrabajosProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Component id="jButton7" min="-2" max="-2" attributes="0"/>
@@ -78,41 +78,41 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="CargarTrabajos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargar Trabajos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CargarTrabajosActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="CargarProfesores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargar Profesores"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CargarProfesoresActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="ConsultarTrabajosProfesor">
       <Properties>
         <Property name="text" type="java.lang.String" value="Consultar Trabajos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConsultarTrabajosProfesorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="ReportarTrabajosProfesores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reportar Trabajos de Profesores"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="ReportarTrabajosCentros">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reportar Trabajos de Centro"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="ReportarTrabajosPostgrados">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reportar Trabajos de Postgrado"/>
       </Properties>

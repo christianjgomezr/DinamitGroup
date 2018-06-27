@@ -28,44 +28,44 @@ public class IMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        CargarTrabajos = new javax.swing.JButton();
+        CargarProfesores = new javax.swing.JButton();
+        ConsultarTrabajosProfesor = new javax.swing.JButton();
+        ReportarTrabajosProfesores = new javax.swing.JButton();
+        ReportarTrabajosCentros = new javax.swing.JButton();
+        ReportarTrabajosPostgrados = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicio");
         setResizable(false);
 
-        jButton1.setText("Cargar Trabajos");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        CargarTrabajos.setText("Cargar Trabajos");
+        CargarTrabajos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                CargarTrabajosActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cargar Profesores");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        CargarProfesores.setText("Cargar Profesores");
+        CargarProfesores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                CargarProfesoresActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Consultar Trabajos");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ConsultarTrabajosProfesor.setText("Consultar Trabajos");
+        ConsultarTrabajosProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ConsultarTrabajosProfesorActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Reportar Trabajos de Profesores");
+        ReportarTrabajosProfesores.setText("Reportar Trabajos de Profesores");
 
-        jButton5.setText("Reportar Trabajos de Centro");
+        ReportarTrabajosCentros.setText("Reportar Trabajos de Centro");
 
-        jButton6.setText("Reportar Trabajos de Postgrado");
+        ReportarTrabajosPostgrados.setText("Reportar Trabajos de Postgrado");
 
         jButton7.setText("Volver");
 
@@ -81,15 +81,15 @@ public class IMenu extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(ConsultarTrabajosProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                            .addComponent(CargarProfesores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CargarTrabajos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addComponent(ReportarTrabajosProfesores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ReportarTrabajosCentros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(ReportarTrabajosPostgrados, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
@@ -97,16 +97,16 @@ public class IMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton4))
+                    .addComponent(CargarTrabajos)
+                    .addComponent(ReportarTrabajosProfesores))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton5))
+                    .addComponent(CargarProfesores)
+                    .addComponent(ReportarTrabajosCentros))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton3))
+                    .addComponent(ReportarTrabajosPostgrados)
+                    .addComponent(ConsultarTrabajosProfesor))
                 .addGap(50, 50, 50)
                 .addComponent(jButton7)
                 .addContainerGap(23, Short.MAX_VALUE))
@@ -116,17 +116,17 @@ public class IMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     //Cargar 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void CargarTrabajosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarTrabajosActionPerformed
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_CargarTrabajosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void ConsultarTrabajosProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarTrabajosProfesorActionPerformed
+       Ctrl_Reportes.getInstance().i_ConsultarTrabajos(); 
+    }//GEN-LAST:event_ConsultarTrabajosProfesorActionPerformed
     //cargar profesores
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void CargarProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarProfesoresActionPerformed
         Ctrl_Reportes.getInstance().i_CargarProfesores();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_CargarProfesoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,12 +164,12 @@ public class IMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton CargarProfesores;
+    private javax.swing.JButton CargarTrabajos;
+    private javax.swing.JButton ConsultarTrabajosProfesor;
+    private javax.swing.JButton ReportarTrabajosCentros;
+    private javax.swing.JButton ReportarTrabajosPostgrados;
+    private javax.swing.JButton ReportarTrabajosProfesores;
     private javax.swing.JButton jButton7;
     // End of variables declaration//GEN-END:variables
 }

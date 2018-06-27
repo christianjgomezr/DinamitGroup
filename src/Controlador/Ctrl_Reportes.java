@@ -16,10 +16,14 @@ public class Ctrl_Reportes {
 
         private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
     }
-    //variables
-    private ICargarProfesores ICP;
+    //variables que contienen las interfaces graficas
     private IMenu IM;
+    private ICargarProfesores ICP;
     
+    private IConsultarTrabajos ICT;
+    
+    
+  
     //MENU
     public void i_Menu() {
         if(IM == null) {
@@ -173,6 +177,16 @@ public class Ctrl_Reportes {
         
     }
     
+    
+    
+    public void i_ConsultarTrabajos() {
+        if(ICT == null) {
+            ICT = new IConsultarTrabajos();
+             ICT.setVisible(true);
+        } else {
+            ICT = null;
+        }
+    }
     
     //METODOS DE REPORTES
     

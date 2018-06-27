@@ -15,9 +15,7 @@ public class GeneradorDeReportes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Ctrl_Reportes.getInstance().i_copiar_archivo_prof();
-       //Ctrl_Reportes.getInstance().i_copiar_archivo_trab();
-       Ctrl_Reportes.getInstance().i_Menu();                    //INicia ejecucion de aplicacion
+        Ctrl_Reportes.getInstance().i_Menu();                    //INicia ejecucion de aplicacion
     }
     
 }
