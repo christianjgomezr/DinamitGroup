@@ -5,10 +5,7 @@
  */
 package Vista;
 
-/**
- *
- * @author krlos
- */
+
 public class IConsultarTrabajos extends javax.swing.JFrame {
 
     /**
