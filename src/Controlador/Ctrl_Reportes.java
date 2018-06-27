@@ -16,7 +16,7 @@ public class Ctrl_Reportes {
 
         private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
     }
-    //variables que contienen las interfaces graficas
+    //variables que ontienen las interfaces graficas
     private IMenu IM;
     private ICargarProfesores ICP;
     
