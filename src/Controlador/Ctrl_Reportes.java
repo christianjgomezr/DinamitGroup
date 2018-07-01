@@ -1,35 +1,62 @@
 package Controlador;
 import java.io.*;
-
 import Vista.*;
+import javax.swing.JFrame;
 
 
 public class Ctrl_Reportes {
     private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
     private Ctrl_Reportes() {
-        ICP=null;
-        IM=null;
-        ICT=null;
+        ICargarProf=new ICargarProfesores(this);
+        IMen= new IMenu(this);
+        ISelectUs = new ISelectUser(this);
+        IConsultarTrab= new IConsultarTrabajos(this);
     } 
     public static Ctrl_Reportes getInstance() {
         return INSTANCE;
     }
     
     //atributos de interfaces graficas
-    private IMenu IM;
-    private ICargarProfesores ICP;
+    private IMenu IMen;
+    private ISelectUser ISelectUs;
+    private ICargarProfesores ICargarProf;
+    private IConsultarTrabajos IConsultarTrab;
     
-    private IConsultarTrabajos ICT;
+    private JFrame ventanaAnterior;
     
-    
-  
-    //MENU
-    public void i_Menu() {
-        if(IM == null) {
-            IM = new IMenu(this);
-        }
-        IM.setVisible(true);
+    public void ocultarTodo() {
+        IMen.setVisible(false);
+        ISelectUs.setVisible(false);
+        
+        ICargarProf.setVisible(false);
+        IConsultarTrab.setVisible(false);
     }
+    
+    //MENU e ISelectUser
+    public void i_Menu() {
+        ocultarTodo();
+        IMen.setVisible(true);
+    }
+    
+    public void ventanaAnterior(int tipoUser) { //1 es comision
+        if(tipoUser == 1) {
+            ventanaAnterior = IMen;
+        } else if(tipoUser ==0 ) {
+            ventanaAnterior = ISelectUs;
+        }
+    }
+    
+    public void volver() {
+        ocultarTodo();
+        ventanaAnterior.setVisible(true);   
+    }
+    
+    public void i_SelectUser() {
+        ocultarTodo();
+        ISelectUs.setVisible(true);
+    }
+    
+        
     
     
     //METODOS DE LA CLASE CONTROLADORA
@@ -164,10 +191,10 @@ public class Ctrl_Reportes {
     
     //METODOS DE INTERFACES
     public void i_CargarProfesores() {
-        if(ICP == null) {
-            ICP = new ICargarProfesores(this);
+        if(ICargarProf == null) {
+            ICargarProf = new ICargarProfesores(this);
         }   
-        ICP.setVisible(true);
+        ICargarProf.setVisible(true);
         
       
         
@@ -176,9 +203,10 @@ public class Ctrl_Reportes {
     
     
     public void i_ConsultarTrabajos() {
-        if(ICT == null) {
-            ICT = new IConsultarTrabajos(this);
+        if(IConsultarTrab == null) {
+            IConsultarTrab = new IConsultarTrabajos(this);
         }
+        IConsultarTrab.setVisible(true);
     }
     
     //METODOS DE REPORTES

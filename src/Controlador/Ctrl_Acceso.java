@@ -16,7 +16,7 @@ public class Ctrl_Acceso {
      */
     public static void main(String[] args) {
         CTRL = Ctrl_Reportes.getInstance();                    //INicia ejecucion de aplicacion
-        CTRL.i_Menu();
+        CTRL.i_SelectUser();
     }
     
 }

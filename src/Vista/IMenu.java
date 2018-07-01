@@ -35,7 +35,7 @@ public class IMenu extends javax.swing.JFrame {
         ReportarTrabajosProfesores = new javax.swing.JButton();
         ReportarTrabajosCentros = new javax.swing.JButton();
         ReportarTrabajosPostgrados = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicio");
@@ -68,7 +68,12 @@ public class IMenu extends javax.swing.JFrame {
 
         ReportarTrabajosPostgrados.setText("Reportar Trabajos de Postgrado");
 
-        jButton7.setText("Volver");
+        volver.setText("Volver");
+        volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,7 +83,7 @@ public class IMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton7))
+                        .addComponent(volver))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +114,7 @@ public class IMenu extends javax.swing.JFrame {
                     .addComponent(ReportarTrabajosPostgrados)
                     .addComponent(ConsultarTrabajosProfesor))
                 .addGap(50, 50, 50)
-                .addComponent(jButton7)
+                .addComponent(volver)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -122,12 +127,18 @@ public class IMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_CargarTrabajosActionPerformed
 
     private void ConsultarTrabajosProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarTrabajosProfesorActionPerformed
-       CTRL.i_ConsultarTrabajos(); 
+       CTRL.ventanaAnterior(1);
+       System.out.print("ingrso a consultar en modo comision");
+        CTRL.i_ConsultarTrabajos(); 
     }//GEN-LAST:event_ConsultarTrabajosProfesorActionPerformed
     //cargar profesores
     private void CargarProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarProfesoresActionPerformed
         CTRL.i_CargarProfesores();
     }//GEN-LAST:event_CargarProfesoresActionPerformed
+
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+        CTRL.i_SelectUser();
+    }//GEN-LAST:event_volverActionPerformed
 
     
 
@@ -138,6 +149,6 @@ public class IMenu extends javax.swing.JFrame {
     private javax.swing.JButton ReportarTrabajosCentros;
     private javax.swing.JButton ReportarTrabajosPostgrados;
     private javax.swing.JButton ReportarTrabajosProfesores;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

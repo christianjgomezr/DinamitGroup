@@ -50,6 +50,11 @@ public class IConsultarTrabajos extends javax.swing.JFrame {
         Consultar.setText("Consultar");
 
         volver.setText("Volver");
+        volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverActionPerformed(evt);
+            }
+        });
 
         listaTrabajos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -98,6 +103,10 @@ public class IConsultarTrabajos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+       CTRL.volver();
+    }//GEN-LAST:event_volverActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
