@@ -134,7 +134,7 @@ public class Ctrl_Reportes {
                 ++li_str;
                 
                 //campos opcionales:
-                if(nivel.equalsIgnoreCase("TEG")) {   //Teg: 1 o 2 estudiantes----uno de los tutores pertenece a planta Profesoral
+                
                    // [#apellido1#nombre1]
                    while(linea.charAt(ls_str) != '#') {ls_str++;}
                    apellido = linea.substring(li_str, ls_str);
@@ -149,10 +149,28 @@ public class Ctrl_Reportes {
                    nombre = linea.substring(li_str, ls_str);
                    if(nombre.length() <=1) {
                        nombre = " ";
-                   }                   
-                } else if(nivel.equalsIgnoreCase("TDR")) {
+                   }
+
+                if(nivel.equalsIgnoreCase("TEG")) {   //Teg: [apellido2 y noembre2]
+                   while(linea.charAt(ls_str) != '#') {ls_str++;}
+                   apellido_2 = linea.substring(li_str, ls_str);
+                   if(apellido_2.length() <=1) {
+                       apellido_2 = " ";
+                   }
+                   li_str = ls_str;
+                ++ls_str; 
+                ++li_str;
+                   
+                   while(linea.charAt(ls_str) != '#') {ls_str++;}
+                   nombre_2 = linea.substring(li_str, ls_str);
+                   if(nombre_2.length() <=1) {
+                       nombre_2 = " ";
+                   }
+
+                }   //else: tdr o tgm-> solo un estudiante puede desarrolarlo
                     
-                }
+                
+                //tomar sem1erainc y fecha
                 
                 
                 
