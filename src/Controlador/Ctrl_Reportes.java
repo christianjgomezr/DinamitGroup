@@ -167,9 +167,9 @@ public class Ctrl_Reportes {
                        nombre_2 = " ";
                    }
 
-                }   //else: tdr o tgm-> solo un estudiante puede desarrolarlo
+                }//else: tdr o tgm-> solo un estudiante puede desarrolarlo
                     
-                
+                 
                 //tomar sem1erainc y fecha
                 
                 
