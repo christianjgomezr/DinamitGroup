@@ -5,18 +5,17 @@ import Vista.*;
 
 
 public class Ctrl_Reportes {
+    private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
     private Ctrl_Reportes() {
         ICP=null;
         IM=null;
+        ICT=null;
     } 
     public static Ctrl_Reportes getInstance() {
-        return Ctrl_ReportesHolder.INSTANCE;
+        return INSTANCE;
     }
-    private static class Ctrl_ReportesHolder {
-
-        private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
-    }
-    //variables que ontienen las interfaces graficas
+    
+    //atributos de interfaces graficas
     private IMenu IM;
     private ICargarProfesores ICP;
     
@@ -27,7 +26,7 @@ public class Ctrl_Reportes {
     //MENU
     public void i_Menu() {
         if(IM == null) {
-            IM = new IMenu();
+            IM = new IMenu(this);
         }
         IM.setVisible(true);
     }
@@ -165,13 +164,10 @@ public class Ctrl_Reportes {
     
     //METODOS DE INTERFACES
     public void i_CargarProfesores() {
-        
         if(ICP == null) {
-            ICP = new ICargarProfesores();
-             ICP.setVisible(true);
-        } else {
-            ICP = null;
-        }
+            ICP = new ICargarProfesores(this);
+        }   
+        ICP.setVisible(true);
         
       
         
@@ -181,10 +177,7 @@ public class Ctrl_Reportes {
     
     public void i_ConsultarTrabajos() {
         if(ICT == null) {
-            ICT = new IConsultarTrabajos();
-             ICT.setVisible(true);
-        } else {
-            ICT = null;
+            ICT = new IConsultarTrabajos(this);
         }
     }
     

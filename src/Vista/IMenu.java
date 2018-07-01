@@ -11,11 +11,12 @@ import Controlador.*;
  * @author krlos
  */
 public class IMenu extends javax.swing.JFrame {
-
+    private Ctrl_Reportes CTRL;
     /**
      * Creates new form IMenu
      */
-    public IMenu() {
+    public IMenu(Ctrl_Reportes r) {
+        CTRL = r;
         initComponents();
     }
 
@@ -121,47 +122,14 @@ public class IMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_CargarTrabajosActionPerformed
 
     private void ConsultarTrabajosProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarTrabajosProfesorActionPerformed
-       Ctrl_Reportes.getInstance().i_ConsultarTrabajos(); 
+       CTRL.i_ConsultarTrabajos(); 
     }//GEN-LAST:event_ConsultarTrabajosProfesorActionPerformed
     //cargar profesores
     private void CargarProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarProfesoresActionPerformed
-        Ctrl_Reportes.getInstance().i_CargarProfesores();
+        CTRL.i_CargarProfesores();
     }//GEN-LAST:event_CargarProfesoresActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new IMenu().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CargarProfesores;

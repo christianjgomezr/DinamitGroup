@@ -9,7 +9,7 @@ package Controlador;
  *
  * @author krlos
  */
-public class Acceso {
+public class Ctrl_Acceso {
     private static Ctrl_Reportes CTRL;
     /**
      * @param args the command line arguments
