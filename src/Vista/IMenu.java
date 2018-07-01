@@ -123,7 +123,7 @@ public class IMenu extends javax.swing.JFrame {
     
     //Cargar 
     private void CargarTrabajosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarTrabajosActionPerformed
-        
+        CTRL.i_CargarTrabajos();
     }//GEN-LAST:event_CargarTrabajosActionPerformed
 
     private void ConsultarTrabajosProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarTrabajosProfesorActionPerformed

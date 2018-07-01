@@ -5,19 +5,17 @@
  */
 package Vista;
 import Controlador.Ctrl_Reportes;
-
 /**
  *
  * @author krlos
  */
-public class ICargarProfesores extends javax.swing.JFrame {
+public class ICargarTrabajos extends javax.swing.JFrame {
     private Ctrl_Reportes CTRL;
     /**
-     * Creates new form ICargarProfesores
-     * @param r
+     * Creates new form ICargarTrabajos
      */
-    public ICargarProfesores(Ctrl_Reportes r) {
-        CTRL=r;
+    public ICargarTrabajos(Ctrl_Reportes r) {
+        CTRL = r;
         initComponents();
     }
 
@@ -30,8 +28,6 @@ public class ICargarProfesores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jPopupMenu1 = new javax.swing.JPopupMenu();
         Cargar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Msj = new javax.swing.JTextField();
@@ -39,10 +35,7 @@ public class ICargarProfesores extends javax.swing.JFrame {
         Cancelar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        jLabel1.setText("jLabel1");
-
-        setTitle("CragarProfesores");
-        setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Cargar.setText("Cargar");
         Cargar.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +80,7 @@ public class ICargarProfesores extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(113, 113, 113)
                         .addComponent(Cargar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -111,7 +104,7 @@ public class ICargarProfesores extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(Msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,25 +116,20 @@ public class ICargarProfesores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void desplegar_msj(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplegar_msj
-        int T = CTRL.i_copiar_archivo_prof();
-        if(T>0) {
-            Msj.setText(T+" profesores cargados con exito");
-        } else {
-           Msj.setText("Archivo invalido"); 
-        }    
+        
     }//GEN-LAST:event_desplegar_msj
 
     private void MsjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MsjActionPerformed
-        
-    }//GEN-LAST:event_MsjActionPerformed
 
-    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CancelarActionPerformed
+    }//GEN-LAST:event_MsjActionPerformed
 
     private void Volver(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volver
         this.setVisible(false);
     }//GEN-LAST:event_Volver
+
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -149,9 +137,7 @@ public class ICargarProfesores extends javax.swing.JFrame {
     private javax.swing.JButton Cargar;
     private javax.swing.JTextField Msj;
     private javax.swing.JButton Volver;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }

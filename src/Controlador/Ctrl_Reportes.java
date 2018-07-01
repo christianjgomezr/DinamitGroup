@@ -8,6 +8,7 @@ public class Ctrl_Reportes {
     private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
     private Ctrl_Reportes() {
         ICargarProf=new ICargarProfesores(this);
+        ICargarTrab = new ICargarTrabajos(this);
         IMen= new IMenu(this);
         ISelectUs = new ISelectUser(this);
         IConsultarTrab= new IConsultarTrabajos(this);
@@ -20,6 +21,7 @@ public class Ctrl_Reportes {
     private IMenu IMen;
     private ISelectUser ISelectUs;
     private ICargarProfesores ICargarProf;
+    private ICargarTrabajos ICargarTrab;
     private IConsultarTrabajos IConsultarTrab;
     
     private JFrame ventanaAnterior;
@@ -195,12 +197,11 @@ public class Ctrl_Reportes {
             ICargarProf = new ICargarProfesores(this);
         }   
         ICargarProf.setVisible(true);
-        
-      
-        
     }
     
-    
+    public void i_CargarTrabajos() {
+        ICargarTrab.setVisible(true);
+    }
     
     public void i_ConsultarTrabajos() {
         if(IConsultarTrab == null) {
