@@ -110,8 +110,7 @@ public class Ctrl_Reportes {
         int ls_str=4, li_str=4;
         
         try {
-            FileReader fr = new FileReader("trabajos.txt");
-            BufferedReader br = new BufferedReader(fr);
+            BufferedReader br = new BufferedReader(new FileReader("trabajos.txt"));
             while((linea = br.readLine()) != null && linea.equals("EOF") == false) {
                 System.out.println("se ha leido la linea "+linea);
                 //asignar a campos OBLIGATORIOS 1
@@ -130,56 +129,32 @@ public class Ctrl_Reportes {
                 while(linea.charAt(ls_str) != '#') {ls_str++;}
                 ci = linea.substring(li_str, ls_str);
                                
+                li_str = ls_str;
+                ++ls_str; 
+                ++li_str;
                 
                 //campos opcionales:
-                //[apellido y nombre 1]
-                 li_str = ls_str;
+                if(nivel.equalsIgnoreCase("TEG")) {   //Teg: 1 o 2 estudiantes----uno de los tutores pertenece a planta Profesoral
+                   // [#apellido1#nombre1]
+                   while(linea.charAt(ls_str) != '#') {ls_str++;}
+                   apellido = linea.substring(li_str, ls_str);
+                   if(apellido.length() <=1) {
+                       apellido = " ";
+                   }
+                   li_str = ls_str;
                 ++ls_str; 
                 ++li_str;
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                apellido = linea.substring(li_str, ls_str);
-                
-                 li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                nombre = linea.substring(li_str, ls_str);
-                
-                //[ci_2, nombre2 y apellido2]
-                li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
-                    while(linea.charAt(ls_str) != '#') {ls_str++;}
-                    ci_2 = linea.substring(li_str, ls_str);
-                } else {
-                    ci_2 = " ";
+                   
+                   while(linea.charAt(ls_str) != '#') {ls_str++;}
+                   nombre = linea.substring(li_str, ls_str);
+                   if(nombre.length() <=1) {
+                       nombre = " ";
+                   }                   
+                } else if(nivel.equalsIgnoreCase("TDR")) {
+                    
                 }
                 
-                li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
                 
-                if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
-                    while(linea.charAt(ls_str) != '#') {ls_str++;}
-                    apellido_2 = linea.substring(li_str, ls_str);
-                } else {
-                    apellido_2 = " ";
-                }
-                 li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                 if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
-                     while(linea.charAt(ls_str) != '#') {ls_str++;}
-                     nombre_2 = linea.substring(li_str, ls_str);
-                 } else {
-                     nombre_2 =" ";
-                 }
-                
-                 
-                 
-                 
-                System.out.println("INFO:\nnivel:"+nivel+"\ntitulo:"+titulo+"\nci:"+ci+"\napellido1:"+apellido+"\nnombre1:"+nombre+"\nci_2:"+ci_2+"\napellido2:"+apellido_2+"\nnombre2:"+nombre_2);
                 
                 
                 //reiniciar apuntadores de subcadenas
