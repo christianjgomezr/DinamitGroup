@@ -135,42 +135,53 @@ public class Ctrl_Reportes {
                 
                 //campos opcionales:
                 
-                   // [#apellido1#nombre1]
-                   while(linea.charAt(ls_str) != '#') {ls_str++;}
-                   apellido = linea.substring(li_str, ls_str);
-                   if(apellido.length() <=1) {
-                       apellido = " ";
-                   }
-                   li_str = ls_str;
+                //campos opcionales:
+                //[apellido y nombre 1]
+                 li_str = ls_str;
                 ++ls_str; 
                 ++li_str;
-                   
-                   while(linea.charAt(ls_str) != '#') {ls_str++;}
-                   nombre = linea.substring(li_str, ls_str);
-                   if(nombre.length() <=1) {
-                       nombre = " ";
-                   }
-
-                if(nivel.equalsIgnoreCase("TEG")) {   //Teg: [apellido2 y noembre2]
-                   while(linea.charAt(ls_str) != '#') {ls_str++;}
-                   apellido_2 = linea.substring(li_str, ls_str);
-                   if(apellido_2.length() <=1) {
-                       apellido_2 = " ";
-                   }
-                   li_str = ls_str;
+                while(linea.charAt(ls_str) != '#') {ls_str++;}
+                apellido = linea.substring(li_str, ls_str);
+                
+                 li_str = ls_str;
                 ++ls_str; 
                 ++li_str;
-                   
-                   while(linea.charAt(ls_str) != '#') {ls_str++;}
-                   nombre_2 = linea.substring(li_str, ls_str);
-                   if(nombre_2.length() <=1) {
-                       nombre_2 = " ";
-                   }
-
-                }//else: tdr o tgm-> solo un estudiante puede desarrolarlo
-                    
+                while(linea.charAt(ls_str) != '#') {ls_str++;}
+                nombre = linea.substring(li_str, ls_str);
+                
+                if(nivel.equalsIgnoreCase("TEG")) {
+                    //[ci_2, nombre2 y apellido2]
+                    li_str = ls_str;
+                    ++ls_str; 
+                    ++li_str;
+                    if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
+                      while(linea.charAt(ls_str) != '#') {ls_str++;}
+                         ci_2 = linea.substring(li_str, ls_str);
+                    } else {
+                          ci_2 = " ";
+                    }
+                
+                    li_str = ls_str;
+                    ++ls_str; 
+                    ++li_str;
+                
+                    if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
+                         while(linea.charAt(ls_str) != '#') {ls_str++;}
+                        apellido_2 = linea.substring(li_str, ls_str);
+                   } else {
+                         apellido_2 = " ";
+                     }
+                     li_str = ls_str;
+                    ++ls_str; 
+                    ++li_str;
+                    if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
+                         while(linea.charAt(ls_str) != '#') {ls_str++;}
+                        nombre_2 = linea.substring(li_str, ls_str);
+                    } else {
+                         nombre_2 =" ";
+                 }
                  
-                //tomar sem1erainc y fecha
+                
                 
                 
                 
