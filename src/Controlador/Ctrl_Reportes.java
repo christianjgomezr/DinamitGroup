@@ -216,7 +216,7 @@ public class Ctrl_Reportes {
                 System.out.println("ci:"+ci);    
                  System.out.println("apellido1: "+apellido);
                 System.out.println("nombre1: "+nombre);
-                System.out.println("ci_2: "+ci_2);             
+                System.out.println("ci_2:"+ci_2);             
                  System.out.println("apellido2: "+apellido_2);       
                 System.out.println("nombre2: "+nombre_2);
                 System.out.println("sem1erainsc:"+sem1erainsc);
