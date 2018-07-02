@@ -120,7 +120,6 @@ public class ICargarTrabajos extends javax.swing.JFrame {
     }//GEN-LAST:event_desplegar_msj
 
     private void MsjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MsjActionPerformed
-
     }//GEN-LAST:event_MsjActionPerformed
 
     private void Volver(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volver
