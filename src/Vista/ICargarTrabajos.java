@@ -127,7 +127,7 @@ public class ICargarTrabajos extends javax.swing.JFrame {
     }//GEN-LAST:event_Volver
 
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_CancelarActionPerformed
 
 

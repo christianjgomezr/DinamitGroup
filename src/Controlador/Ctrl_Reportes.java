@@ -211,7 +211,9 @@ public class Ctrl_Reportes {
                 //ci t
                 while(linea.charAt(ls_str) != '#') {ls_str++;}
                 ci_t = linea.substring(li_str, ls_str);
-                 System.out.println("ci:"+ci);    
+                 
+                
+                System.out.println("ci:"+ci);    
                  System.out.println("apellido1: "+apellido);
                 System.out.println("nombre1: "+nombre);
                 System.out.println("ci_2: "+ci_2);             
