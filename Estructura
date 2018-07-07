@@ -1,0 +1,51 @@
+public abstract class Estructura 
+{
+//---------------Atributos-----------------------------------
+    private String ci;
+    private String Nombre;
+    private String Apellido;
+    private int cont_Total;
+//-----------------Metodos----------------------------------   
+//--------------Constructora--------------------------------
+    public Estructura ()
+    {
+        ci = "";
+        Nombre = "";
+        Apellido = "" ;
+    }
+//----------------Sets--------------------------------------
+    public void setCI(String ci)
+    {
+        this.ci= ci;
+    }
+    public void setNombre(String Nombre)
+    {
+        this.Nombre= Nombre;
+    }
+    public void setApellido(String Apellido)
+    {
+        this.Apellido= Apellido;
+    } 
+//----------------Gets--------------------------------------
+    public String getCI()
+    {
+        return ci;
+    }
+    public String getNombre()
+    {
+        return Nombre;
+    }
+    public String getApellido()
+    {
+        return Apellido;
+    }
+//---------------llenar campos-------------------------------
+    public abstract void llenarCampos(String linea); 
+//------------------Sumar------------------------------------       
+    public void sumar ()
+    {
+        cont_Total ++;
+    }
+    
+    
+}
