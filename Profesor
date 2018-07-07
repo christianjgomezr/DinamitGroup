@@ -1,0 +1,26 @@
+public class Profesor extends Estructura{
+//------------------Atributos---------------------------------------
+    private String centro;
+//------------------Metodos-----------------------------------------
+//---------------Constructora---------------------------------------
+    public Profesor()
+    {
+        super();
+        centro = "";
+    }
+//----------------------Sets----------------------------------------
+    public void setCentro(String centro)
+    {
+        this.centro= centro;
+    }
+//---------------------Gets-----------------------------------------
+    public String getCentro()
+    {
+        return centro;
+    }
+    public void llenarCampos(String linea)
+    { 
+
+    }
+//    
+}
