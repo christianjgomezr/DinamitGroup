@@ -9,7 +9,7 @@ package Modelo;
  *
  * @author krlos
  */
-class Estructura {
+/*public abstract class Estructura {
     protected int ci;
     protected String Nombre;
     protected String Apellido;
@@ -29,5 +29,5 @@ class Estructura {
     
     void llenarCampos(String linea) {
         
-    }
+    }*/
 }
