@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author CHRISTIAN
+ */
+public class Profesor {
+//------------------Atributos---------------------------------------
+    private String centro;
+    private String Nombre;
+    private String Apellido;
+    private int ci;
+//------------------Metodos-----------------------------------------
+//---------------Constructora---------------------------------------
+    public Profesor()
+    {
+        centro = "";
+        Nombre = "";
+        Apellido = "";
+        ci = 0;
+    }
+//----------------------Sets----------------------------------------
+    public void setCentro(String centro)
+    {
+        this.centro= centro;
+    }
+        public void setNombre(String Nombre)
+    {
+        this.Nombre= Nombre;
+    }
+    public void setApellido(String Apellido)
+    {
+        this.Apellido= Apellido;
+    } 
+     public void setCI(int ci)
+    {
+        this.ci= ci;
+    }
+//---------------------Gets-----------------------------------------
+    public String getCentro()
+    {
+        return centro;
+    }
+    public int getci()
+    {
+        return ci;
+    }
+    public Profesor getProfesor()
+    {
+        return this;
+    }
+    public void llenarCampos(String lineas)
+    { 
+
+    }  
+}
