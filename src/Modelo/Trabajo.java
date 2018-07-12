@@ -9,10 +9,13 @@ package Modelo;
  *
  * @author krlos
  */
-class Trabajo extends Estructura {
+public class Trabajo{
     private String nivel;
     private String titulo;
-    private long ci_2;
+    private int ci;
+    private String Apellido1;
+    private String Nombre1;
+    private int ci_2;
     private String Apellido_2;
     private String Nombre_2;
     private String sem1erainsc;
@@ -21,7 +24,7 @@ class Trabajo extends Estructura {
     private String Apellido_t1;
     private String Nombre_t1;
     private long ci_t2;
-     private String Apellido_t2;
+    private String Apellido_t2;
     private String Nombre_t2;
     
     
@@ -32,6 +35,10 @@ class Trabajo extends Estructura {
     String getFechaDefensa() {
         return fechaDefensa;
     }
-    
-    
+    int getCi_t() {
+        return ci_t;
+    }
+    int getCi_t2(){
+        return ci_t2;
+    }
 }
