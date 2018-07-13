@@ -246,7 +246,29 @@ public class Ctrl_Reportes {
     
         //Reportar Trabajos Centros
     public void i_Consultar_Cent(String centro, Date fech_li, Date fech_ls) {
-        
+           
+        for(int i=0;i<Size(ConjuntoTrabajos);i++){
+        if(Trabajo.getfechaDefensa() <= fech_ls ^ Trabajo.getFechaDefensa() >= fech_li)
+            if(PerteneceMismoCentro(centro, ConjuntoTrabajos.listado[i].getCi_t1,ConjuntoTrabajos.listado[i].getCi_t2)){ 
+                ReporteCentros.lista.Centro.add();
+            }else{
+                ReporteCentros.lista.Centro1.add();
+                ReporteCentros.lista.Centro2.add()
+            }
+                    
+        }
+        desplegar(ReporteCentros)
+    }
+    
+    public boolean PerteneceMismoCentro(String centro,int c1, int c2){
+        for(int i=0; i<Size(ConjuntoProfesores); i++){
+            if (ConjuntoProfesores[i].getCi()== c1 || ConjuntoProfesores[i].getCi()== c2){
+                if(ConjuntoProfesores[i].getCentro()==centro)
+                    return true;
+            }
+        }
+        return false;
+     }
     }
     
         //
