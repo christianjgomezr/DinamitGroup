@@ -241,7 +241,18 @@ public class Ctrl_Reportes {
     
         //Reportar Trabajos Profesores
     public void i_Consultar_Prof(Date fech_li, Date fech_ls, int ord) {
-        
+        for (int i=0;i< Size(ConjuntoTrabajos); i++){
+            if(ConjuntoTrabajos.listado[i].getFechaDefensa() <= fech_ls ^ ConjuntoTrabajos.listado[i].getFechaDefensa() >= fecha_li){ 
+                if(ExisteProf(ConjuntoTrabajos.listado[i].getCi_t1)){
+                    ReporteProfesores.Lista.ci_t1.cant_trab++;
+                }
+                if(ExisteProf(ConjuntoTrabajos.listado[i].getCi_t2)){
+                    ReporteProfesores.Lista.ci_t2.cant_trab++;
+                }
+            }
+        }
+ ReporteProfesores.Ordenar(ord)
+ desplegar(ReporteProfesores);
     }
     
         //Reportar Trabajos Centros
@@ -261,9 +272,9 @@ public class Ctrl_Reportes {
     }
     
     public boolean PerteneceMismoCentro(String centro,int c1, int c2){
-        for(int i=0; i<Size(ConjuntoProfesores); i++){
-            if (ConjuntoProfesores[i].getCi()== c1 || ConjuntoProfesores[i].getCi()== c2){
-                if(ConjuntoProfesores[i].getCentro()==centro)
+        for(int i=0; i<co.getSize(); i++){
+            if (cp[i].getCi()== c1 || cp[i].getCi()== c2){
+                if(cp[i].getCentro()==centro)
                     return true;
             }
         }
