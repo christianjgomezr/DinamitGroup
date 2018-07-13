@@ -19,6 +19,7 @@ public class ICargarProfesores extends javax.swing.JFrame {
     public ICargarProfesores(Ctrl_Reportes r) {
         CTRL=r;
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -34,14 +35,15 @@ public class ICargarProfesores extends javax.swing.JFrame {
         jPopupMenu1 = new javax.swing.JPopupMenu();
         Cargar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        Msj = new javax.swing.JTextField();
+        Msj_Profesor = new javax.swing.JTextField();
         Volver = new javax.swing.JButton();
         Cancelar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        Direccion_Profesor = new javax.swing.JTextField();
 
         jLabel1.setText("jLabel1");
 
-        setTitle("CragarProfesores");
+        setTitle("Cargar Profesores");
         setResizable(false);
 
         Cargar.setText("Cargar");
@@ -53,10 +55,10 @@ public class ICargarProfesores extends javax.swing.JFrame {
 
         jLabel2.setText("Estado:");
 
-        Msj.setEditable(false);
-        Msj.addActionListener(new java.awt.event.ActionListener() {
+        Msj_Profesor.setEditable(false);
+        Msj_Profesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MsjActionPerformed(evt);
+                Msj_ProfesorActionPerformed(evt);
             }
         });
 
@@ -81,42 +83,48 @@ public class ICargarProfesores extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Cargar)
+                .addGap(55, 55, 55)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Volver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(113, 113, 113)
-                        .addComponent(Cargar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
+                        .addGap(14, 14, 14)
+                        .addComponent(Msj_Profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Msj)
-                        .addGap(10, 10, 10)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cancelar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Volver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                        .addComponent(Direccion_Profesor, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Direccion_Profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Volver)
+                    .addComponent(Cargar))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Volver)
-                            .addComponent(Cargar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                            .addComponent(jLabel2)
+                            .addComponent(Cancelar))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(Msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cancelar))
-                .addGap(31, 31, 31))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Msj_Profesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -125,15 +133,15 @@ public class ICargarProfesores extends javax.swing.JFrame {
     private void desplegar_msj(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplegar_msj
         int T = CTRL.i_copiar_archivo_prof();
         if(T>0) {
-            Msj.setText(T+" profesores cargados con exito");
+            Msj_Profesor.setText(T+" profesores cargados con exito");
         } else {
-           Msj.setText("Archivo invalido"); 
+           Msj_Profesor.setText("Archivo invalido"); 
         }    
     }//GEN-LAST:event_desplegar_msj
 
-    private void MsjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MsjActionPerformed
+    private void Msj_ProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Msj_ProfesorActionPerformed
         
-    }//GEN-LAST:event_MsjActionPerformed
+    }//GEN-LAST:event_Msj_ProfesorActionPerformed
 
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         // TODO add your handling code here:
@@ -147,7 +155,8 @@ public class ICargarProfesores extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cancelar;
     private javax.swing.JButton Cargar;
-    private javax.swing.JTextField Msj;
+    private javax.swing.JTextField Direccion_Profesor;
+    private javax.swing.JTextField Msj_Profesor;
     private javax.swing.JButton Volver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
