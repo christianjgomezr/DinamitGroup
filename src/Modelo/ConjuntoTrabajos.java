@@ -7,12 +7,12 @@ package Modelo;
 import java.util.ArrayList;
 /**
  *
- * @author Sagnior
+ * @author Ugueto
  */
 public class ConjuntoTrabajos{
     private ArrayList<Trabajo> listado;
     
-    public void agregar(Trabajo P){
-        listado.add(P);
+    public void agregar(Trabajo T){
+        listado.add(T);
     }
 }
