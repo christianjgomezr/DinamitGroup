@@ -3,6 +3,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import Modelo.Trabajo;
 
 public abstract class Reporte {
  //   protected SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
