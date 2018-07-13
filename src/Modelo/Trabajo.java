@@ -38,7 +38,11 @@ public class Trabajo{
     public String getCi_t2(){
         return ci_t2;
     }
-    
+    //---------------------LLenarcampos---------------------------------
+//------Asigna el valor de los atributos de la clase Trabajo
+//------dado un String que sigue el siguiente formato
+//------nivel#titulo#ci#[Apellido1#Nombre1#][ci_2#Apellido2#Nombre2#]
+//------sem1erainsc#dd“/”mm“/”aa#ci_t[#Apellido_t1#Nombre_t1][#ci_t2][#Apellido_t2#Nombre_t2]“;”
     public int llenarCampos(String linea)
     {
        int ls_str=4, li_str=4;
