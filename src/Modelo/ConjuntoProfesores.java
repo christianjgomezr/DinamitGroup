@@ -20,7 +20,7 @@ public class ConjuntoProfesores {
         listado.add(P);
     }
     
-    public int getSize() {
+    public int getTotal() {
         return listado.size();
     }
 }
