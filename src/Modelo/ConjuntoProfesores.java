@@ -10,9 +10,17 @@ import java.util.ArrayList;
  * @author Ugueto
  */
 public class ConjuntoProfesores {
-    private ArrayList<Profesor> listado;
-    
+     
+     private ArrayList<Profesor> listado;
+    public ConjuntoProfesores() {
+        listado = new ArrayList<>();
+    }
+     
     public void agregar(Profesor P){
         listado.add(P);
+    }
+    
+    public int getSize() {
+        return listado.size();
     }
 }
