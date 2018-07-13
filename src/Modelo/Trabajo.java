@@ -20,10 +20,10 @@ public class Trabajo{
     private String Nombre_2;
     private String sem1erainsc;
     private String fechaDefensa;
-    private long ci_t;
+    private int ci_t;
     private String Apellido_t1;
     private String Nombre_t1;
-    private long ci_t2;
+    private int ci_t2;
     private String Apellido_t2;
     private String Nombre_t2;
     
