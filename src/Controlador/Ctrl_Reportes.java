@@ -1,5 +1,5 @@
 package Controlador;
-mport Modelo.ConjuntoProfesores;
+import Modelo.ConjuntoProfesores;
 import Modelo.ConjuntoTrabajos;
 import Modelo.Profesor;
 import Modelo.Trabajo;
