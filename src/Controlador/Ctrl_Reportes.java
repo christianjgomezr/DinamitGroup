@@ -291,15 +291,20 @@ public class Ctrl_Reportes {
         int j=0;
         int S = 0;//ConjuntoTrabajos.Tamanio();
         int total=0;
+        //falta como saber que prof del conjunto es el que tratamos
         /*
-        for(;i<S ;++i) {
-            if(ConjuntoTrabajos.listado[i].getCI == prof) {
+            Reporte.agregarProf(prof);
+    for(int i=0;i<Size(ConjuntoTrabajos);i++){
+             if (ConjuntoTrabajos.listado[i].getCi_t()==profesor.getCi){
+                 Reporte.agregarT(ConjuntoTrabajos.listado[i]);
+             }
               
-                Lista[j] = ConjuntoTrabajos.listado[i].getTrabajo();
-               ++total;  
-               ++j; 
-            }  
-        }
+             else if(ConjuntoTrabajos.listado[i].getCi_t2()==profesor.getCi){
+                        Reporte.agregarT(ConjuntoTrabajos.listado[i]);
+             }
+    }
+    
+    Consulta.desplegarConsulta()
      */   
     }
     
