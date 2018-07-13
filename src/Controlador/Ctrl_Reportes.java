@@ -1,4 +1,8 @@
 package Controlador;
+mport Modelo.ConjuntoProfesores;
+import Modelo.ConjuntoTrabajos;
+import Modelo.Profesor;
+import Modelo.Trabajo;
 import java.io.*;
 import Vista.*;
 import javax.swing.JFrame;
@@ -64,42 +68,24 @@ public class Ctrl_Reportes {
     //METODOS DE LA CLASE CONTROLADORA
     public int i_copiar_archivo_prof() {
         String linea;
-        int total_prof=0;
-        String Nombre, Apellido, ci, centro;
-        int li_str=0, ls_str=1;
+        ConjuntoProfesores cp = new ConjuntoProfesores();  //Prueba de carga de profesores en esta estructura
+        Profesor prof;
         
-        
-        try {
+       try {
             FileReader fr = new FileReader("profs_Centros.txt");
             BufferedReader br = new BufferedReader(fr);
-          
+                   
             while((linea = br.readLine()) != null && linea.equals("EOF") == false) {
                 System.out.println("se ha leido la linea "+linea);
                 
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                ci = linea.substring(li_str, ls_str);
-                li_str = ls_str +=1;
-                
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                Apellido = linea.substring(li_str, ls_str);
-                li_str = ls_str +=1;
-                
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                Nombre = linea.substring(li_str, ls_str);
-                li_str = ls_str +=1;
-                
-                while(linea.charAt(ls_str) != ';') {ls_str++;}
-                centro = linea.substring(li_str, ls_str);
-                
-                System.out.println("\nci:"+ci+"\nNombre:"+Nombre+"\nApellido:"+Apellido+"\ncentro:"+centro);
-                
-                li_str = ls_str=0;
-                ++total_prof;
+                prof = new Profesor();
+                prof.llenarCampos(linea);
+                cp.agregar(prof);              
             }    
         } catch(Exception e) {
-            total_prof=0;
+            return 0;
         } finally {} 
-        return total_prof;
+        return cp.getSize();
     }
     
     public void i_copiar_archivo_trab() {
