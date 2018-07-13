@@ -29,16 +29,16 @@ public class Trabajo{
     
     
     //metodos
-    String getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
-    String getFechaDefensa() {
+    public String getFechaDefensa() {
         return fechaDefensa;
     }
-    int getCi_t() {
+    public int getCi_t() {
         return ci_t;
     }
-    int getCi_t2(){
+    public int getCi_t2(){
         return ci_t2;
     }
 }
