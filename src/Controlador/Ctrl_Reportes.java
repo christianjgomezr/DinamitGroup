@@ -79,13 +79,13 @@ public class Ctrl_Reportes {
                 System.out.println("se ha leido la linea "+linea);
                 
                 P = new Profesor();
-                prof.llenarCampos(linea);
+                P.llenarCampos(linea);
                 cp.agregar(P);              
             }    
         } catch(Exception e) {
             return 0;
         } finally {} 
-        return cp.getSize();
+        return cp.getTotal();
     }
     
      public int i_copiar_archivo_trab() {
