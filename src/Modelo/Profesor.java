@@ -9,9 +9,15 @@ package Modelo;
  *
  * @author krlos
  */
-class Profesor extends Estructura {
-    private String centro;
-    public String getCentro() {
+public class Profesor {
+    int ci;
+    String Apellido;
+    String Nombre; 
+    String centro;
+    public String getCentro(){
         return centro;
+    }
+    public int getCi(){
+        return ci;
     }
 }
