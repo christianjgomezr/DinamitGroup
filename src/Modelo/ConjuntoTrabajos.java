@@ -19,6 +19,9 @@ public class ConjuntoTrabajos{
     public void agregar(Trabajo T){
         listado.add(T);
     }
+    public ArrayList<Trabajo> getListado(){
+        return listado;
+    }
     public int getTotal() {
         return listado.size();
     }
