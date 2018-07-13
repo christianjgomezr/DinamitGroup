@@ -115,9 +115,14 @@ public class ICargarTrabajos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void desplegar_msj(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplegar_msj
-        CTRL.i_copiar_archivo_trab();
-    }//GEN-LAST:event_desplegar_msj
+    private void desplegar_msj(java.awt.event.ActionEvent evt) {                               
+        int T = CTRL.i_copiar_archivo_trab();
+        if(T>0) {
+            Msj.setText(T+" trabajos cargados con exito");
+        } else {
+           Msj.setText("Archivo invalido"); 
+        }  
+    }   
 
     private void MsjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MsjActionPerformed
     }//GEN-LAST:event_MsjActionPerformed
