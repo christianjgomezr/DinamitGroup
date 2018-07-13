@@ -11,11 +11,7 @@ import java.util.ArrayList;
  */
 public class ConjuntoTrabajos{
     private ArrayList<Trabajo> listado;
-    public ConjuntoTrabajos() {
-        listado = new ArrayList<>();
-}
-    
-    
+     
     public void agregar(Trabajo T){
         listado.add(T);
     }
