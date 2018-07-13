@@ -19,7 +19,9 @@ public class ConjuntoProfesores {
     public void agregar(Profesor P){
         listado.add(P);
     }
-    
++   public ArrayList<Profesor> getListado(){
++       return listado;
++   }
     public int getTotal() {
         return listado.size();
     }
