@@ -10,14 +10,33 @@ package Modelo;
  * @author krlos
  */
 public class Profesor {
-    int ci;
+    String ci;
     String Apellido;
     String Nombre; 
     String centro;
     public String getCentro(){
         return centro;
     }
-    public int getCi(){
+    public String getCi(){
         return ci;
+    }
+    
+    public void llenarCampos(String linea) {
+        int li_str=0, ls_str=1;
+                 while(linea.charAt(ls_str) != '#') {ls_str++;}
+                this.ci = linea.substring(li_str, ls_str);
+                li_str = ls_str +=1;
+                
+                while(linea.charAt(ls_str) != '#') {ls_str++;}
+                this.Apellido = linea.substring(li_str, ls_str);
+                li_str = ls_str +=1;
+                
+                while(linea.charAt(ls_str) != '#') {ls_str++;}
+                this.Nombre = linea.substring(li_str, ls_str);
+                li_str = ls_str +=1;
+                
+                while(linea.charAt(ls_str) != ';') {ls_str++;}
+                this.centro = linea.substring(li_str, ls_str);
+                //System.out.println("\nci:"+ci+"\nNombre:"+Nombre+"\nApellido:"+Apellido+"\ncentro:"+centro);
     }
 }
