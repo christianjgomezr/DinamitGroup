@@ -69,7 +69,7 @@ public class Ctrl_Reportes {
     public int i_copiar_archivo_prof() {
         String linea;
         ConjuntoProfesores cp = new ConjuntoProfesores();  //Prueba de carga de profesores en esta estructura
-        Profesor prof;
+        Profesor P;
         
        try {
             FileReader fr = new FileReader("profs_Centros.txt");
@@ -78,9 +78,9 @@ public class Ctrl_Reportes {
             while((linea = br.readLine()) != null && linea.equals("EOF") == false) {
                 System.out.println("se ha leido la linea "+linea);
                 
-                prof = new Profesor();
+                P = new Profesor();
                 prof.llenarCampos(linea);
-                cp.agregar(prof);              
+                cp.agregar(P);              
             }    
         } catch(Exception e) {
             return 0;
@@ -90,27 +90,24 @@ public class Ctrl_Reportes {
     
      public int i_copiar_archivo_trab() {
         String linea;
-        
-        ConjuntoTrabajos ct = new ConjuntoTrabajos();
-
-        
+        ConjuntoTrabajos ct = new ConjuntoTrabajos();        
         try {
             FileReader fr = new FileReader("trabajos.txt");
             BufferedReader br = new BufferedReader(fr);
             while((linea = br.readLine()) != null && linea.equals("EOF") == false) {
                 System.out.println("se ha leido la linea "+linea);
                 
-                Trabajo trb = new Trabajo();
-                if (trb.llenarCampos(linea) == -1) {
+                Trabajo T = new Trabajo();
+                if (T.llenarCampos(linea) == -1) {
                   throw new IOException();  
-                } 
+                }
+                ct.agregar(T);
             }
             
         } catch(IOException e) {
-            System.out.print("Archivo no valido.\n Detalles error: "+e.getMessage());
-            return 0;
-        } finally {}
-         return ct.getTotal();
+             return 0;
+        } finally {} 
+        return ct.getTotal();
 }
     
     
