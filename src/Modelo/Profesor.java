@@ -17,6 +17,12 @@ public class Profesor {
     public String getCentro(){
         return centro;
     }
+    public String getNombre(){
+        return Nombre;
+    }
+    public String getApellido(){
+        return Apellido;
+    }
     public String getCi(){
         return ci;
     }
