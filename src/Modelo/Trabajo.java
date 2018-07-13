@@ -202,7 +202,7 @@ public class Trabajo{
                     }
                     System.out.println("Listo nt1"+Nombre_t2);
                 
-                
+                //esto es pa verificar que se este haciendo lo correcto
                 System.out.println("ci:"+ci);    
                  System.out.println("apellido1: "+Apellido1);
                 System.out.println("nombre1: "+Nombre1);
@@ -212,7 +212,7 @@ public class Trabajo{
                 System.out.println("sem1erainsc:"+sem1erainsc);
                 System.out.println("fechaDefensa:"+fechaDefensa);
                 System.out.println("ci_t: "+ci_t);
-                //reiniciar apuntadores de subcadenas
+                
              
              return 1;
    }  
