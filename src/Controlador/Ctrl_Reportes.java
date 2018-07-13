@@ -88,134 +88,30 @@ public class Ctrl_Reportes {
         return cp.getSize();
     }
     
-    public void i_copiar_archivo_trab() {
+     public int i_copiar_archivo_trab() {
         String linea;
-        String nivel, titulo, nombre, apellido, ci, ci_2, apellido_2, nombre_2, sem1erainsc;
-        String fechaDefensa, ci_t, apellido_t1, nombre_t1, ci_t2, apellido_t2, nombre_t2;
         
-        int ls_str=4, li_str=4;
+        ConjuntoTrabajos ct = new ConjuntoTrabajos();
+
         
         try {
             FileReader fr = new FileReader("trabajos.txt");
             BufferedReader br = new BufferedReader(fr);
             while((linea = br.readLine()) != null && linea.equals("EOF") == false) {
                 System.out.println("se ha leido la linea "+linea);
-                //asignar a campos OBLIGATORIOS 1
-                nivel = linea.substring(0, 3);
-                if(!nivel.equalsIgnoreCase("TEG") && !nivel.equalsIgnoreCase("TGM") && !nivel.equalsIgnoreCase("TDR")){
-                    throw new IOException("campos de archivo invalidos");
-                }
-                                
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                titulo = linea.substring(li_str, ls_str);
                 
-                li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-             
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                ci = linea.substring(li_str, ls_str);
-                     
-                li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                
-                //campos opcionales:
-                
-                //campos opcionales:
-                //[apellido y nombre 1]
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                apellido = linea.substring(li_str, ls_str);
-                
-                 li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                
-               
-                
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                nombre = linea.substring(li_str, ls_str);
-                
-                li_str = ls_str;
-                    ++ls_str; 
-                    ++li_str;
-                
-                    
-                if(nivel.equalsIgnoreCase("TEG")) {
-                    //[ci_2, nombre2 y apellido2]
-                    
-                    if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
-                      while(linea.charAt(ls_str) != '#') {ls_str++;}
-                         ci_2 = linea.substring(li_str, ls_str);
-                    } else {
-                          ci_2 = " ";
-                    }
-                    
-                    
-                    
-                    li_str = ls_str;
-                    ++ls_str; 
-                    ++li_str;
-                
-                    if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
-                         while(linea.charAt(ls_str) != '#') {ls_str++;}
-                        apellido_2 = linea.substring(li_str, ls_str);
-                   } else {
-                         apellido_2 = " ";
-                     }
-                     li_str = ls_str;
-                    ++ls_str; 
-                    ++li_str;
-                    
-                    
-                    if(linea.charAt(li_str) != linea.charAt(li_str+1)) {
-                         while(linea.charAt(ls_str) != '#') {ls_str++;}
-                        nombre_2 = linea.substring(li_str, ls_str);
-                    } else {
-                         nombre_2 =" ";
-                    }
-                    li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                } else {
-                    apellido_2 = nombre_2 = " ";
-                    ci_2 = " ";
-                }
-                //sem1erains
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                sem1erainsc = linea.substring(li_str, ls_str);
-                li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                //fechaDefensa 
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                fechaDefensa = linea.substring(li_str, ls_str);
-                li_str = ls_str;
-                ++ls_str; 
-                ++li_str;
-                
-                //ci t
-                while(linea.charAt(ls_str) != '#') {ls_str++;}
-                ci_t = linea.substring(li_str, ls_str);
-                 
-                
-                System.out.println("ci:"+ci);    
-                 System.out.println("apellido1: "+apellido);
-                System.out.println("nombre1: "+nombre);
-                System.out.println("ci_2:"+ci_2);             
-                 System.out.println("apellido2: "+apellido_2);       
-                System.out.println("nombre2: "+nombre_2);
-                System.out.println("sem1erainsc:"+sem1erainsc);
-                System.out.println("fechaDefensa:"+fechaDefensa);
-                System.out.println("ci_t: "+ci_t);
-                //reiniciar apuntadores de subcadenas
-                li_str = ls_str =4;
-                }
+                Trabajo trb = new Trabajo();
+                if (trb.llenarCampos(linea) == -1) {
+                  throw new IOException();  
+                } 
+            }
             
         } catch(IOException e) {
             System.out.print("Archivo no valido.\n Detalles error: "+e.getMessage());
-        } finally {} 
-    }
+            return 0;
+        } finally {}
+         return ct.getTotal();
+}
     
     
     //METODOS DE INTERFACES
