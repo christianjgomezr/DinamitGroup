@@ -32,10 +32,10 @@ public class Trabajo{
     }
     
     public String getAutor1() {
-        return Apellido1 + Nombre1;
+        return Apellido1 +" "+ Nombre1;
     }
     public String getAutor2() {
-        return Apellido_2+ Nombre_2;
+        return Apellido_2+" "+Nombre_2;
     }
     
     public String getNivel() {
