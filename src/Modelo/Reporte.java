@@ -10,7 +10,8 @@ public abstract class Reporte {
     protected Date fecha_li ;//(AÑO,MES,DIA)(los meses van de 0 a 11 y es mejor ponerlos así
     protected Date fecha_ls = new Date();
     protected SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    protected ArrayList<Trabajo> Lista;
+    protected ArrayList<Trabajo> ListaTrab;
+    protected ArrayList<Profesor> ListaProf;
     public Reporte() throws ParseException
     {        
         fecha_li = sdf.parse("01/01/2014");
@@ -38,7 +39,7 @@ public abstract class Reporte {
             fecha_trab = sdf.parse(list.get(i).getFechaDefensa());
             if(this.fecha_li.compareTo(fecha_trab)<=0 && this.fecha_ls.compareTo(fecha_trab) >= 0)
             {
-                Lista.add(list.get(i));
+                ListaTrab.add(list.get(i));
             }
         }
      }
