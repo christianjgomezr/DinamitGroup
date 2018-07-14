@@ -7,6 +7,10 @@ import java.io.*;
 import Vista.*;
 import javax.swing.JFrame;
 
+import java.util.Iterator;
+import javax.swing.DefaultListModel;
+import javax.swing.table.DefaultTableModel;
+
 
 public class Ctrl_Reportes {
     private static final Ctrl_Reportes INSTANCE = new Ctrl_Reportes();
@@ -20,6 +24,9 @@ public class Ctrl_Reportes {
     public static Ctrl_Reportes getInstance() {
         return INSTANCE;
     }
+    
+    private ConjuntoProfesores cp; //Por ahora, esto se pone aqui para hacer las pruebas, luego se decide donde se guardan estas instancias
+    private ConjuntoTrabajos ct;
     
     //atributos de interfaces graficas
     private IMenu IMen;
@@ -123,10 +130,25 @@ public class Ctrl_Reportes {
         ICargarTrab.setVisible(true);
     }
     
+    //uc6
     public void i_ConsultarTrabajos() {
         if(IConsultarTrab == null) {
             IConsultarTrab = new IConsultarTrabajos(this);
         }
+        
+        //preparar lista de opciones (comboProfesores) para el cliente
+        DefaultListModel modelo = new DefaultListModel();
+         
+        Iterator<Profesor> I = cp.listado.iterator();
+        Profesor p;
+        
+        while(I.hasNext()) {
+            p = I.next();
+            modelo.addElement(p.getNombre()+" "+p.getApellido()+" /"+p.getCi()+".");
+        }
+        
+        
+        IConsultarTrab.iniciarOpciones(modelo);
         IConsultarTrab.setVisible(true);
     }
     
@@ -179,26 +201,26 @@ public class Ctrl_Reportes {
     
     
         //Consultar Trabajos profesores
-    public void i_Consultar_Trab(String prof) {
-        int i=0; 
+    public void i_Consultar_Trab(String ci_prof) {
+       int i=0; 
         int j=0;
-        int S = 0;//ConjuntoTrabajos.Tamanio();
+        int S = ct.getTotal();
         int total=0;
-        //falta como saber que prof del conjunto es el que tratamos
-        /*
-            Reporte.agregarProf(prof);
-    for(int i=0;i<Size(ConjuntoTrabajos);i++){
-             if (ConjuntoTrabajos.listado[i].getCi_t()==profesor.getCi){
-                 Reporte.agregarT(ConjuntoTrabajos.listado[i]);
-             }
-              
-             else if(ConjuntoTrabajos.listado[i].getCi_t2()==profesor.getCi){
-                        Reporte.agregarT(ConjuntoTrabajos.listado[i]);
-             }
-    }
-    
-    Consulta.desplegarConsulta()
-     */   
+        System.out.println(ci_prof);
+        Trabajo t;
+        Iterator<Trabajo> Ind = ct.listado.iterator();
+        t = Ind.next();
+        while(Ind.hasNext()) {      
+            System.out.println(ci_prof+" es igual a"+t.getCi_t()+" o"+t.getCi_t2()+"?");
+            if(ci_prof.equals(t.getCi_t()) || ci_prof.equals(t.getCi_t2()) ||ci_prof.equals(t.getCi())) {
+                ++total;
+                IConsultarTrab.agregarFila(t.getTitulo(), t.getNivel(), t.getAutor1()+" - " +t.getAutor2(), t.getFechaDefensa());
+            }
+            t = Ind.next();
+        }
+        
+        System.out.println(total);
+       
     }
     
 }
