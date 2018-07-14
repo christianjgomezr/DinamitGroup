@@ -17,6 +17,7 @@ public class Ctrl_Reportes {
     private Ctrl_Reportes() {
         ICargarProf=new ICargarProfesores(this);
         ICargarTrab = new ICargarTrabajos(this);
+        private I_Profesores_Postgrado IReportarPost;
         IMen= new IMenu(this);
         ISelectUs = new ISelectUser(this);
         IConsultarTrab= new IConsultarTrabajos(this);
@@ -130,6 +131,13 @@ public class Ctrl_Reportes {
         ICargarTrab.setVisible(true);
     }
     
+    public void i_ReportePostgrados() {
+        if(IReportarPost == null) {
+            IReportarPost = new I_Profesores_Postgrado(this);
+        }
+        IReportarPost.setVisible(true);
+    }
+    
     //uc6
     public void i_ConsultarTrabajos() {
         if(IConsultarTrab == null) {
@@ -200,6 +208,11 @@ public class Ctrl_Reportes {
     
         //
     
+       //Conusltar Postgrados
+     public void i_Consultar_Post(String fecha_li, String fecha_ls) {
+         
+         
+     }
     
         //Consultar Trabajos profesores
     public void i_Consultar_Trab(String ci_prof) {
