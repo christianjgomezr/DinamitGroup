@@ -11,6 +11,7 @@ public abstract class Reporte {
     protected Date fecha_ls = new Date();
     protected SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     protected ArrayList<Trabajo> Lista;
+    protected ArrayList<Profesor> ListaProf;
     public Reporte() throws ParseException
     {        
         fecha_li = sdf.parse("01/01/2014");
