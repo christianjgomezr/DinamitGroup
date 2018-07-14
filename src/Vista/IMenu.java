@@ -19,8 +19,23 @@ public class IMenu extends javax.swing.JFrame {
         CTRL = r;
         initComponents();
         setLocationRelativeTo(null);
+        fecha_inicial.setText("01/02/2014");
     }
-
+    
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        String f_li, f_ls;
+        f_li = fecha_inicial.getText();
+        f_ls = fecha_final.getText();
+        if(f_li == null) {
+            f_li = "01/02/2014";
+        }
+        if(f_ls == null) {
+            return;
+        }
+        
+        CTRL.i_Consultar_Post(f_li, f_ls);
+    } 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
