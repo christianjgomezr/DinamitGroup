@@ -124,6 +124,9 @@ for(int i=1; i <= filas; ++i)  {
 }
 //extraer cedula
         String cadena = (String)comboProfesores.getSelectedValue();
+         if(cadena == null) {
+            return;
+        }
         String ci;
         int li=0, ls=1;
         while(cadena.charAt(li) != '/') {li++;}
