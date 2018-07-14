@@ -175,7 +175,10 @@ public class IMenu extends javax.swing.JFrame {
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
         CTRL.i_SelectUser();
     }//GEN-LAST:event_volverActionPerformed
-
+    
+    private void ReportarTrabajosPostgradosActionPerformed(java.awt.event.ActionEvent evt) {                                                           
+        CTRL.i_ReportePostgrados();
+    }     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
