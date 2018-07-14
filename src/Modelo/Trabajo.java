@@ -26,12 +26,29 @@ public class Trabajo{
     
     
     //metodos
+    
     public String getTitulo() {
         return titulo;
     }
+    
+    public String getAutor1() {
+        return Apellido1 + Nombre1;
+    }
+    public String getAutor2() {
+        return Apellido_2+ Nombre_2;
+    }
+    
+    public String getNivel() {
+        return nivel;
+    }
+    
     public String getFechaDefensa() {
         return fechaDefensa;
     }
+   public String getCi() {
+        return ci;
+    }
+    
     public String getCi_t() {
         return ci_t;
     }
