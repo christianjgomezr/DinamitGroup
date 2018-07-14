@@ -203,24 +203,18 @@ public class Ctrl_Reportes {
     
         //Consultar Trabajos profesores
     public void i_Consultar_Trab(String ci_prof) {
-       int i=0; 
-        int j=0;
-        int S = ct.getTotal();
-        int total=0;
-        System.out.println(ci_prof);
+      
         Trabajo t;
         Iterator<Trabajo> Ind = ct.getListado().iterator();
         t = Ind.next();
         while(Ind.hasNext()) {      
             System.out.println(ci_prof+" es igual a"+t.getCi_t()+" o"+t.getCi_t2()+"?");
             if(ci_prof.equals(t.getCi_t()) || ci_prof.equals(t.getCi_t2()) ||ci_prof.equals(t.getCi())) {
-                ++total;
-                IConsultarTrab.agregarFila(t.getTitulo(), t.getNivel(), t.getAutor1()+" - " +t.getAutor2(), t.getFechaDefensa());
+                  IConsultarTrab.agregarFila(t.getTitulo(), t.getNivel(), t.getAutor1()+" - " +t.getAutor2(), t.getFechaDefensa());
             }
             t = Ind.next();
         }
-        
-        System.out.println(total);
+      
        
     }
     
