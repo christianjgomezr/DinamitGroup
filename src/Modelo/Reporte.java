@@ -11,7 +11,6 @@ public abstract class Reporte {
     protected Date fecha_ls = new Date();
     protected SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     protected ArrayList<Trabajo> Lista;
-    protected ArrayList<Profesor> ListaProf;
     public Reporte() throws ParseException
     {        
         fecha_li = sdf.parse("01/01/2014");
@@ -29,7 +28,18 @@ public abstract class Reporte {
         if (this.fecha_ls.compareTo(fecha_ls_aux) >= 0)
             this.fecha_ls = fecha_ls_aux;
         else fls = false;
-        return (fli && fls);
-        
+        return (fli && fls);        
     }
+     public void setList(ArrayList<Trabajo> list)throws ParseException
+    {
+        Date fecha_trab;
+        for(int i = 0 ; i < list.size(); i++)
+        {
+            fecha_trab = sdf.parse(list.get(i).getFechaDefensa());
+            if(this.fecha_li.compareTo(fecha_trab)<=0 && this.fecha_ls.compareTo(fecha_trab) >= 0)
+            {
+                Lista.add(list.get(i));
+            }
+        }
+     }
 }
