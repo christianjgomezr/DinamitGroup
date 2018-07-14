@@ -4,19 +4,22 @@
  * and open the template in the editor.
  */
 package Vista;
-
+import Controlador.Ctrl_Reportes;
 /**
  *
  * @author CarlosJosé
  */
 public class I_Profesores_Postgrado extends javax.swing.JFrame {
-
+     private Ctrl_Reportes CTRL;
     /**
      * Creates new form I_Reportar_Profesores
+     * @param r
      */
-    public I_Profesores_Postgrado() {
+    public I_Profesores_Postgrado(Ctrl_Reportes r) {
+        CTRL = r;
         initComponents();
         setLocationRelativeTo(null);
+        fecha_inicial.setText("01/02/2014");
     }
 
     /**
@@ -167,6 +170,20 @@ public class I_Profesores_Postgrado extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        String f_li, f_ls;
+        f_li = fecha_inicial.getText();
+        f_ls = fecha_final.getText();
+        if(f_li == null) {
+            f_li = "01/02/2014";
+        }
+        if(f_ls == null) {
+            return;
+        }
+        
+        CTRL.i_Consultar_Post(f_li, f_ls);
+    }    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Resultados;
