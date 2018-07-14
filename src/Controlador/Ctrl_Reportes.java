@@ -75,7 +75,7 @@ public class Ctrl_Reportes {
     //METODOS DE LA CLASE CONTROLADORA
     public int i_copiar_archivo_prof() {
         String linea;
-        ConjuntoProfesores cp = new ConjuntoProfesores();  //Prueba de carga de profesores en esta estructura
+        cp = new ConjuntoProfesores();  //Prueba de carga de profesores en esta estructura
         Profesor P;
         
        try {
@@ -97,7 +97,7 @@ public class Ctrl_Reportes {
     
      public int i_copiar_archivo_trab() {
         String linea;
-        ConjuntoTrabajos ct = new ConjuntoTrabajos();        
+        ct = new ConjuntoTrabajos();        
         try {
             FileReader fr = new FileReader("trabajos.txt");
             BufferedReader br = new BufferedReader(fr);
