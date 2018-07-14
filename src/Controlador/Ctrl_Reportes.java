@@ -139,12 +139,13 @@ public class Ctrl_Reportes {
         //preparar lista de opciones (comboProfesores) para el cliente
         DefaultListModel modelo = new DefaultListModel();
          
-        Iterator<Profesor> I = cp.listado.iterator();
+        Iterator<Profesor> I = cp.getListado().iterator();
         Profesor p;
-        
+         p = I.next();
         while(I.hasNext()) {
-            p = I.next();
+          
             modelo.addElement(p.getNombre()+" "+p.getApellido()+" /"+p.getCi()+".");
+              p = I.next();
         }
         
         
@@ -208,7 +209,7 @@ public class Ctrl_Reportes {
         int total=0;
         System.out.println(ci_prof);
         Trabajo t;
-        Iterator<Trabajo> Ind = ct.listado.iterator();
+        Iterator<Trabajo> Ind = ct.getListado().iterator();
         t = Ind.next();
         while(Ind.hasNext()) {      
             System.out.println(ci_prof+" es igual a"+t.getCi_t()+" o"+t.getCi_t2()+"?");
