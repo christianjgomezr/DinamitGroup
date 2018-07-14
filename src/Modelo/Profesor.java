@@ -10,10 +10,19 @@ package Modelo;
  * @author krlos
  */
 public class Profesor {
-    String ci;
-    String Apellido;
-    String Nombre; 
-    String centro;
+    private String ci;
+    private String Apellido;
+    private String Nombre; 
+    private String centro;
+    private int cant_trab;
+    public Profesor() //constructor
+    {
+        centro = "";
+        Nombre = "";
+        Apellido = "";
+        ci = "";
+        cant_trab=0;
+    }
     public String getCentro(){
         return centro;
     }
@@ -25,6 +34,14 @@ public class Profesor {
     }
     public String getCi(){
         return ci;
+    }
+    public int getCantTrab()
+     {
+         return cant_trab;
+     }
+    public void SumarTrab()
+    {
+        cant_trab ++;
     }
     
     public void llenarCampos(String linea) {
